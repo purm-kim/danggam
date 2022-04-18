@@ -1,0 +1,30 @@
+// BreakPoints
+
+@mixin mq($point) {
+  @if $point == lg {
+    @media (min-width: 2000px) {
+      @content;
+    }
+  }
+  @if $point == tablet {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if $point == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == notMobile {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
+
+.hidden-xs {
+  @include mq(mobile) {
+    display: none;
+  }
+}

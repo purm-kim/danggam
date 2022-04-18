@@ -1,0 +1,373 @@
+/* font import*/
+@import url('http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+@font-face {
+  font-family: 'Trajan Pro';
+  src: 
+  local('Trajan Pro'),
+  local('Trajan Pro-Bold'),
+  url('/css/fonts/Trajan-Pro.woff') format('woff'),
+  url('/css/fonts/Trajan Pro.ttf') format('truetype');
+  
+}
+// import
+@import "_mixins.scss";
+.h2, .h3, .h4, .h5{
+  font-family: 'Noto Serif KR', serif;
+}
+//text-style
+.h2{
+  font-size: 42rem;
+  letter-spacing: -0.02em;
+  font-weight: 200;
+  line-height: 1.71;
+  &.en{
+    font-size: 50rem;
+    font-weight: 400;
+  }
+}
+.h3{
+  font-size: 24rem;
+  letter-spacing: -0.0075em;
+  font-weight: 300;
+  line-height: 1.5;
+  &.en{
+    font-size: 30rem;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+}
+.h4{
+  font-size: 15rem;
+  letter-spacing: -0.0075em;
+  line-height: 2;
+}
+.fz70{
+  font-size: 70rem;
+  line-height: 90rem;
+}
+
+.en{
+  font-family: 'Trajan Pro' !important;
+}
+//color-style
+:root {
+  --pri-01: #8D776A;
+  --pri-01-o2 : rgba(141, 119, 106, 0.2);
+  --pri-02: #F0E9E3;
+  --pri-03: #0000ff;
+  --pri-04: #ffff00;
+  --pri-05: #00ffff;
+  --sub-01: #9A9A9A;
+  --sub-02: #F8F8F8;
+  --sub-03: #000055;
+  --sub-04: #333300;
+  --sub-05: #003333;
+  --bg-01:#eee;
+  --bg-02:#ccc;
+  --bg-03:#ddd;
+  --bg-04:#999;
+  --bg-05:#777;
+  --gra-01: linear-gradient(to right, var(--pri-01), #3F332B);
+  --gra-02: linear-gradient(to right, #077, #fff);
+  --gra-03: linear-gradient(to right, #007, #fff);
+  --gra-04: linear-gradient(to right, #080, #fff);
+  --white: #fff;
+  --black: #333333;
+  --black-o5:rgba(51, 51, 51, 0.5);
+
+}
+@for $i from 1 to 6 {
+  .pri-0#{$i}{
+    color:var(--pri-0#{$i});
+  }
+  .bg_pri-0#{$i}{
+    background-color:var(--pri-0#{$i});
+  }
+  .sub-0#{$i}{
+    color:var(--sub-0#{$i});
+  }
+  .bg_sub-0#{$i}{
+    background-color:var(--sub-0#{$i});
+  }
+  .bg_gra-0#{$i}{
+    background-color:var(--gra-0#{$i});
+  }
+}
+.white{
+  color:var(--white);
+}
+.black{
+  color:var(--black);
+}
+.black-05{
+  color:var(--black-o5);
+}
+
+// 선택 색상
+::selection {
+  background: var(--sub-01);
+  color: #fff;
+}
+.highlight {
+  box-shadow: inset 0 -8rem 0 rgba(156, 158, 57, 0.2);
+}
+// 스크롤 색상
+* {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1rem var(--sub-01);
+    border-radius: 10rem;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--pri-01);
+    border-radius: 10rem;
+  }
+}
+
+@for $i from 10 to 50 {
+  .fz#{$i}{
+    font-size: #{$i}rem;
+  }
+}
+.fw200 {
+  font-weight: 200;
+}
+.fw300 {
+  font-weight: 300;
+}
+.fw400 {
+  font-weight: normal;
+}
+.fw500 {
+  font-weight: 500;
+}
+.fw700, .bold, strong {
+  font-weight: bold;
+}
+a:focus {
+  outline: 0;
+}
+.flex{
+  display: flex;
+  &.mo-col{
+    @include mq(mobile){
+      flex-direction: column;
+    }
+  }
+}
+.grid{
+  display: grid;
+  &.mo-col1{
+    @include mq(mobile){
+      grid-template-columns: 1fr;
+    }
+  }
+  &.mo-col2{
+    @include mq(mobile){
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+.pcc{
+  place-content: center;
+}
+.pic{
+  place-items: center;
+}
+.jcc{
+  justify-content: center;
+}
+.aic{
+  align-items: center;
+}
+.acc{
+  align-content: center;
+}
+.jcsb{
+  justify-content: space-between;
+}
+.jcse{
+  justify-content: space-evenly;
+}
+.dib{
+  display: inline-block;
+}
+.di{
+  display: inline;
+}
+@for $i from 2 to 13 {
+  .gtc-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+}
+
+.container-960 {
+  @include container(960rem, 90%);
+}
+.container-1200 {
+  @include container(1200rem, 80%);
+}
+.container-1280 {
+  @include container(1280rem, 80%);
+}
+.container-1300 {
+  @include container(1300rem, 85%);
+  @include mq(mobile) {
+    width: 85%;
+  }
+}
+.container-1380 {
+  @include container(1380rem, 85%);
+  @include mq(mobile) {
+    width: 85%;
+  }
+}
+.container-1400 {
+  @include container(1400rem, 85%);
+  @include mq(mobile) {
+    width: 85%;
+  }
+}
+.container-full {
+  @include container(100%,100%);
+}
+span,
+div,
+p {
+  word-break: keep-all;
+}
+p {
+  line-height: 1.88;
+}
+// 미디어별 폰트 크기
+// 미디어별 폰트크기 수정
+html {
+  font-size: 6.25%;
+  // @include mq(lg) {
+  //   font-size: 0.05254860746190225vw;
+  // }
+  @include mq(tablet) {
+    font-size: 0.0724636vw;
+  }
+  @include mq(mobile) {
+    font-size: 0.2vw;
+  }
+}
+html{
+  overflow-x: hidden;
+}
+html,
+body {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  word-break: keep-all;
+  &.lock {
+    @include mq(mobile) {
+      overflow: hidden;
+    }
+  }
+}
+input {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+section {
+  &:last-of-type {
+    margin-bottom: 50rem;
+  }
+}
+section > .title_text {
+  font-size: 44rem;
+  text-align: center;
+}
+.tal {
+  text-align: left !important;
+}
+.tac {
+  text-align: center !important;
+}
+.tar {
+  text-align: right !important;
+}
+
+@for $i from 0 to 11 {
+  .pt#{$i}0{
+    padding-top: #{$i}0rem;
+  }
+  .mb#{$i}0{
+    margin-bottom: #{$i}0rem;
+  }
+  .mt-#{$i}0{
+    margin-top: -#{$i}0rem;
+  }
+  .mb-#{$i}0{
+    margin-bottom: -#{$i}0rem;
+  }
+}
+
+
+// 미디어별 VISIBLE & HIDDEN
+.visible-xs {
+  display: none;
+  @include mq(mobile) {
+    display: block !important;
+  }
+}
+.hidden-xs {
+  display: unset;
+  @include mq(mobile) {
+    display: none !important;
+  }
+}
+h2.title{
+
+}
+.blind{
+  display: block;
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+.img_wrap{
+  &.contain{
+    img{
+      object-fit: contain;
+    }
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.upc{
+  text-transform: uppercase;
+}
+.hr{
+  height: 1px;
+  width: 100%;
+  background-color: var(--black);
+}
+.nowrap{
+  white-space: nowrap;
+}
+.pos-r{
+  position: relative;
+}
+.pos-center{
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%, -50%);
+}

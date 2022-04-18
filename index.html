@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- 트윈맥스 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 스와이퍼 cdn -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+  <title>당감메인</title>
+</head>
+<body>
+  
+  <!-- 헤더 -->
+  <header class="" id="header">
+    <div class="w-1400"></div>
+  </header>
+  <div class="submenu">
+    <div class="w-1400"></div>
+  </div>
+
+  <!-- 퀵메뉴 -->
+  <section class="quick_menu"></section>
+
+  <!-- 메인슬라이드 -->
+  <section class="mainvisual">
+    <div class="swiper" id="main_visual">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var swiper = new Swiper("#main_visual", {
+      spaceBetween: 5,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    })
+  </script>
+
+  <!-- 중간섹션 -->
+  <section class="sec_mid">
+
+    
+
+    <!-- 진료과목 -->
+    <div class="w-1200 depart flex mo_col">
+      <div class="txt">
+        <p>BEST ORTHOPEDICS CLINIC</p>
+        <p>안녕하세요 
+          <span>베스트정형외과</span>입니다.
+          어디가 불편하신가요?</p>
+      </div>
+      <div class="swiper" id="depart">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img_wrap">
+              <img src="https://via.placeholder.com/300x200.png" alt="">
+            </div>
+            <div class="txt">
+              <p>목</p>
+              <p>목이 잘 안 움직여요</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img_wrap">
+              <img src="https://via.placeholder.com/300x200.png" alt="">
+            </div>
+            <div class="txt">
+              <p>목</p>
+              <p>목이 잘 안 움직여요</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img_wrap">
+              <img src="https://via.placeholder.com/300x200.png" alt="">
+            </div>
+            <div class="txt">
+              <p>목</p>
+              <p>목이 잘 안 움직여요</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img_wrap">
+              <img src="https://via.placeholder.com/300x200.png" alt="">
+            </div>
+            <div class="txt">
+              <p>목</p>
+              <p>목이 잘 안 움직여요</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <script>
+        var swiper = new Swiper('#depart' , {
+          spaceBetween: 30,
+          slidesPerView: "auto",
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          loop : true,
+        })
+      </script>
+    </div>
+    
+
+
+    <!-- 스크롤에 텍스트 굴리기 -->
+    <div class="txt_rolling"></div>
+    <script>
+      var controller = new ScrollMagic.Controller();
+
+      var tween = TweenMax.to('.txt_scrolling' , 0.5, {
+        right: 0,
+      });
+
+      var scene = new ScrollMagic.Scene({
+        triggerElement :  '.sec_mid',
+        duration : '100%',
+      })
+      .setTween(tween)
+      .addTo(controller)
+      .addIndicators({
+      });
+
+    </script>
+
+    <!-- 둘러보기 -->
+    <div class="w-1200">
+      <div class="txt"></div>
+      <div class="swiper " id="view"></div>
+    </div>
+
+  </section>
+
+
+  <!-- 원장소개 -->
+  <section class="doc">
+    <div class="w-1200 flex_box">
+
+    </div>
+  </section>
+
+  <!-- 오시는 길 -->
+  <section class="info">
+    <div class="w-1200 flex_box">
+      <div class="time_info"></div>
+      <div class="loca_info"></div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="" id="footer">
+    <div class="w-1400"></div>
+  </footer>
+
+
+</body>
+</html>

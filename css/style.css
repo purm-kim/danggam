@@ -1,0 +1,206 @@
+@media (max-width: 768px) {
+  .hidden-xs {
+    display: none;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 6.25%;
+}
+
+.h1_b {
+  font-size: 35rem;
+  font-weight: 700;
+}
+
+.w-1200 {
+  margin: 0 auto;
+  width: 1200rem;
+  max-width: 80%;
+}
+
+.w-1400 {
+  margin: 0 auto;
+  width: 1400rem;
+  max-width: 90%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .flex.mo_col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#header {
+  width: 100%;
+  height: 100rem;
+  background-color: bisque;
+}
+
+.mainvisual {
+  height: calc(100vh - 100rem);
+}
+
+.mainvisual .swiper-slide {
+  width: 100%;
+  height: calc(100vh - 100rem);
+  background-color: #c4c4c4;
+}
+
+.mainvisual .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.quick_menu {
+  position: fixed;
+  top: 50%;
+  right: 50rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+  width: 80rem;
+  height: 400rem;
+  border-radius: 20rem;
+  background-color: #fff;
+  -webkit-box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.15);
+          box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.15);
+}
+
+.sec_mid {
+  position: relative;
+  padding: 200rem 0;
+  overflow-x: hidden;
+}
+
+.sec_mid::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  content: "";
+  display: block;
+  width: 50%;
+  height: 920rem;
+  background-color: #00b6bc;
+}
+
+.sec_mid::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 490rem;
+  background-color: #f6f6f6;
+}
+
+.sec_mid .depart {
+  position: relative;
+  height: 300rem;
+}
+
+.sec_mid .depart .txt {
+  width: 50%;
+}
+
+.sec_mid .depart #depart {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 1100rem;
+  height: 300rem;
+}
+
+.sec_mid .depart #depart .swiper-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sec_mid .depart #depart .swiper-wrapper .swiper-slide {
+  width: 300rem !important;
+  height: 287rem !important;
+  background-color: #fff;
+}
+
+.sec_mid .depart #depart .swiper-wrapper .swiper-slide .img_wrap {
+  width: 100%;
+  height: 200rem;
+}
+
+.sec_mid .depart #depart .swiper-wrapper .swiper-slide .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sec_mid .depart #depart .swiper-wrapper .swiper-slide-active {
+  border: 6rem solid transparent;
+  -o-border-image: linear-gradient(to bottom, #036B6B, #5CCBCB);
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#036B6B), to(#5CCBCB));
+     border-image: linear-gradient(to bottom, #036B6B, #5CCBCB);
+  border-image-slice: 1;
+}
+
+.txt_rolling {
+  position: relative;
+  margin: 80rem 0;
+  height: 150rem;
+}
+
+.txt_rolling::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "BEST ORTHOPAEDIC CLINIC";
+  font-size: 120rem;
+  font-weight: bold;
+  color: #ebebeb;
+  background-blend-mode: multiply;
+}
+
+#view {
+  height: 400rem;
+  background-color: #bdbdbd;
+}
+
+.doc {
+  padding: 190rem 0;
+}
+
+.doc .w-1200 {
+  background-color: #f5fcfc;
+  height: 600rem;
+}
+
+.info {
+  padding: 120rem 0 150rem;
+  background-color: #036b6b;
+}
+
+.info .w-1200 {
+  background-color: #fff;
+  height: 400rem;
+}
+
+#footer {
+  height: 300rem;
+  background-color: #4a4e51;
+}
