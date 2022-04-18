@@ -199,6 +199,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .sec_mid .depart #depart .swiper-wrapper .swiper-slide .tit {
   padding: 15rem;
   width: 300rem;
+  text-align: center;
 }
 
 .sec_mid .depart #depart .swiper-wrapper .swiper-slide-active {
