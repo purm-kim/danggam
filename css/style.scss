@@ -42,10 +42,43 @@ $regular : 500;
 $medium : 600;
 $bold : 700;
 
-
+//폰트 스타일
 .h1_b{
   font-size: 35rem;
   font-weight: $bold;
+}
+.h1{
+  font-size: 35rem;
+}
+.h2{
+  font-size: 21rem;
+}
+.h2_b{
+  font-size: 21rem;
+  font-weight: $bold;
+}
+.h3{
+  font-size: 18rem;
+}
+.h3_b{
+  font-size: 18rem;
+  font-weight: $bold;
+}
+.h4_b{
+  font-size: 48rem;
+  font-weight: $bold;
+}
+.h5_b{
+  font-size: 60rem;
+  font-weight: $bold;
+}
+
+//폰트컬러
+.fc01{
+  color: #00b6bc;
+}
+.fc02{
+  color: #626262;
 }
 
 .w-1200{
