@@ -198,7 +198,10 @@ $bold : 700;
               object-fit: cover;
             }
           }
-          
+          .tit{
+            padding: 20rem;
+            width: 100%;
+          }
         }
         .swiper-slide-active{
           border: 6rem solid transparent;

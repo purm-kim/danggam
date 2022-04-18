@@ -196,6 +196,11 @@ p, h1, h2, h3, h4, h5, h6 {
      object-fit: cover;
 }
 
+.sec_mid .depart #depart .swiper-wrapper .swiper-slide .tit {
+  padding: 20rem;
+  width: 100%;
+}
+
 .sec_mid .depart #depart .swiper-wrapper .swiper-slide-active {
   border: 6rem solid transparent;
   -o-border-image: linear-gradient(to bottom, #036B6B, #5CCBCB);
