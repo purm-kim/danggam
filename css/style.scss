@@ -44,6 +44,11 @@ p, h1, h2, h3, h4, h5, h6{
   margin: 0;
   padding: 0;
 }
+ul, ol{
+  padding: 0 ;
+  margin: 0;
+  list-style: none;
+}
 
 //font-weight
 $thin : 300;
@@ -147,6 +152,33 @@ $bold : 700;
   border-radius: 20rem;
   background-color: #fff;
   box-shadow: 3rem 3rem 3rem rgba($color: #000, $alpha: 0.15);
+  ul{
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20rem;
+    li{
+      width: 60rem;
+      height: 60rem;
+      a{
+        border-radius: 10rem;
+        display: inline-block;
+        padding: 15rem;
+        &.on{
+          background-color: #e9e9e9;
+        }
+      }
+      .img_wrap{
+        width: 30rem;
+        height: 30rem;
+        img{
+          object-fit: contain;
+        }
+      }
+    }
+  }
 }
 
 .sec_mid{
@@ -176,7 +208,6 @@ $bold : 700;
     background-color: #f6f6f6;
   }
 
-  
   .depart{
     position: relative;
     height: 300rem;
@@ -227,9 +258,24 @@ $bold : 700;
     }
   }
 
+  .txt_rolling{
+    position: relative;
+    margin: 80rem 0;
+    height: 150rem;
+    // background-color: aliceblue;
+    &::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "BEST ORTHOPAEDIC CLINIC";
+      font-size: 120rem;
+      font-weight: bold;
+      color: #ebebeb;
+      background-blend-mode: multiply;
+    }
+  }
+
   .view{
-    
-    
     #view{
       margin: 0;
       width: 50%;
@@ -278,22 +324,7 @@ $bold : 700;
 
 
 
-.txt_rolling{
-  position: relative;
-  margin: 80rem 0;
-  height: 150rem;
-  // background-color: aliceblue;
-  &::after{
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "BEST ORTHOPAEDIC CLINIC";
-    font-size: 120rem;
-    font-weight: bold;
-    color: #ebebeb;
-    background-blend-mode: multiply;
-  }
-}
+
 
 
 
@@ -301,9 +332,12 @@ $bold : 700;
   padding: 190rem 0;
   // background-color: #f5fcfc;
   .w-1200{
+    padding: 100rem 60rem 60rem;
     background-color: #f5fcfc;
     height: 600rem;
-    .txt{}
+    .txt{
+
+    }
   }
 }
 
