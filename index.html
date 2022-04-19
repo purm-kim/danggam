@@ -14,6 +14,8 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+
   <title>당감메인</title>
 </head>
 <body>
@@ -34,13 +36,13 @@
     <div class="swiper" id="main_visual">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="" alt="">
+          <img src="https://via.placeholder.com/1920x1020.png" alt="">
         </div>
         <div class="swiper-slide">
-          <img src="" alt="">
+          <img src="https://via.placeholder.com/1920x1020.png" alt="">v
         </div>
         <div class="swiper-slide">
-          <img src="" alt="">
+          <img src="https://via.placeholder.com/1920x1020.png" alt="">
         </div>
       </div>
     </div>
@@ -59,12 +61,10 @@
   <!-- 중간섹션 -->
   <section class="sec_mid">
 
-    
-
     <!-- 진료과목 -->
     <div class="w-1200 depart flex mo_col">
       <div class="txt">
-        <p class="h2 fc02">BEST ORTHOPEDICS CLINIC</p>
+        <p class="h2 fc03">BEST ORTHOPEDICS CLINIC</p>
         <p class="h1_b">안녕하세요
           <br><span class="h1_b fc01">베스트정형외과</span>입니다.
           <br>어디가 불편하신가요?</p>
@@ -75,7 +75,7 @@
             <div class="img_wrap">
               <img src="https://via.placeholder.com/300x200.png" alt="">
             </div>
-            <div class="tit">
+            <div class="txt">
               <p class="h2_b">목</p>
               <p class="h3 fc02">목이 잘 안 움직여요</p>
             </div>
@@ -85,8 +85,8 @@
               <img src="https://via.placeholder.com/300x200.png" alt="">
             </div>
             <div class="txt">
-              <p>목</p>
-              <p>목이 잘 안 움직여요</p>
+              <p class="h2_b">목</p>
+              <p class="h3 fc02">목이 잘 안 움직여요</p>
             </div>
           </div>
           <div class="swiper-slide">
@@ -94,8 +94,8 @@
               <img src="https://via.placeholder.com/300x200.png" alt="">
             </div>
             <div class="txt">
-              <p>목</p>
-              <p>목이 잘 안 움직여요</p>
+              <p class="h2_b">목</p>
+              <p class="h3 fc02">목이 잘 안 움직여요</p>
             </div>
           </div>
           <div class="swiper-slide">
@@ -103,8 +103,8 @@
               <img src="https://via.placeholder.com/300x200.png" alt="">
             </div>
             <div class="txt">
-              <p>목</p>
-              <p>목이 잘 안 움직여요</p>
+              <p class="h2_b">목</p>
+              <p class="h3 fc02">목이 잘 안 움직여요</p>
             </div>
           </div>
           
@@ -112,8 +112,9 @@
       </div>
       <script>
         var swiper = new Swiper('#depart' , {
-          spaceBetween: 40,
+          spaceBetween: 30,
           slidesPerView: "auto",
+          speed : 2000,
           autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -122,8 +123,6 @@
         })
       </script>
     </div>
-    
-
 
     <!-- 스크롤에 텍스트 굴리기 -->
     <div class="txt_rolling"></div>
@@ -146,24 +145,57 @@
     </script>
 
     <!-- 둘러보기 -->
-    <div class="w-1200">
-      <div class="txt"></div>
-      <div class="swiper " id="view"></div>
+    <div class="w-1200 view flex mo_col">
+      
+      <div class="swiper " id="view">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/600x400.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="txt">
+        <!-- <p>asdasdasd</p> -->
+      </div>
+
     </div>
+    <script>
+      var swiper = new Swiper( '#view' ,{
+        spaceBetween: 0,
+        slidesPerView: 1,
+        // centeredSlides : true,
+        speed : 3000,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop : true,
+      })
+    </script>
+
+    
 
   </section>
+  
 
 
   <!-- 원장소개 -->
   <section class="doc">
-    <div class="w-1200 flex_box">
-
+    <div class="w-1200 flex mo_col">
+      <div class="txt">
+        <p></p>
+        <h1></h1>
+        <p>내용을 입력해 주세용</p>
+      </div>
+      <div class="img_wrap"></div>
     </div>
   </section>
 
   <!-- 오시는 길 -->
   <section class="info">
-    <div class="w-1200 flex_box">
+    <p></p>
+    <div class="w-1200 flex mo_col">
       <div class="time_info"></div>
       <div class="loca_info"></div>
     </div>
