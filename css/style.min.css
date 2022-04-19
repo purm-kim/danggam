@@ -100,7 +100,7 @@ p, h1, h2, h3, h4, h5, h6 {
 #header {
   width: 100%;
   height: 100rem;
-  background-color: bisque;
+  background-color: #fff;
 }
 
 .mainvisual {
@@ -235,10 +235,45 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .sec_mid .view .txt {
+  position: relative;
   padding: 50rem;
   width: 50%;
   height: 400rem;
-  background-color: #fff;
+  background: #fff url(/img/main/view_bg.png) no-repeat center center/cover;
+}
+
+.sec_mid .view .txt .fc03 {
+  padding-bottom: 30rem;
+}
+
+.sec_mid .view .txt #view_pagination {
+  z-index: 9;
+  width: auto;
+  left: 50rem;
+  height: 75rem;
+}
+
+.sec_mid .view .txt #view_pagination .swiper-pagination-bullet {
+  margin: 0 8rem;
+}
+
+.sec_mid .view .txt #view_pagination .swiper-pagination-bullet-active {
+  position: relative;
+  background-color: #00b6bc;
+}
+
+.sec_mid .view .txt #view_pagination .swiper-pagination-bullet-active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  border: 1rem solid #00b6bc;
 }
 
 .txt_rolling {

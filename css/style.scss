@@ -118,7 +118,7 @@ $bold : 700;
 #header{
   width: 100%;
   height: 100rem;
-  background-color: bisque;
+  background-color: #fff;
 }
 
 .mainvisual{
@@ -237,10 +237,39 @@ $bold : 700;
       // background-color: #fff;
     }
     .txt{
+      position: relative;
       padding: 50rem;
       width: 50%;
       height: 400rem;
-      background-color: #fff;
+      background: #fff url(/img/main/view_bg.png) no-repeat center center / cover;
+      .fc03{
+        padding-bottom: 30rem;
+      }
+      #view_pagination{
+        z-index: 9;
+        width: auto;
+        left: 50rem;
+        height: 75rem;
+        .swiper-pagination-bullet{
+          margin: 0 8rem;
+        }
+        .swiper-pagination-bullet-active{
+          position: relative;
+          background-color: #00b6bc;
+          &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 17rem;
+            height: 17rem;
+            border-radius: 50%;
+            border: 1rem solid #00b6bc;
+          }
+        }
+      }
     }
   }
 }

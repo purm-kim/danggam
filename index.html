@@ -51,6 +51,7 @@
     var swiper = new Swiper("#main_visual", {
       spaceBetween: 5,
       centeredSlides: true,
+      speed : 2000,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -152,11 +153,23 @@
           <div class="swiper-slide">
             <img src="https://via.placeholder.com/600x400.png" alt="">
           </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/600x400.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/600x400.png" alt="">
+          </div>
         </div>
       </div>
 
       <div class="txt">
-        <!-- <p>asdasdasd</p> -->
+        <p class="h2 fc03">BEST ORTHOPEDICS CLINIC</p>
+        <p class="h1_b"><span class="h1_b fc01">당감베스트정형외과</span><br>둘러보기</p>
+        <div class="swiper-pagination" id="view_pagination">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
     </div>
@@ -171,6 +184,11 @@
           disableOnInteraction: false,
         },
         loop : true,
+        pagination : {
+          el : ".swiper-pagination",
+          clickable : true,
+          type : 'bullets'
+        }
       })
     </script>
 
