@@ -49,10 +49,18 @@ ul, ol{
   margin: 0;
   list-style: none;
 }
+a{
+  text-decoration: none;
+  color: #000;
+}
+address{
+  font-style: normal;
+}
+
 
 //font-weight
 $thin : 300;
-$regular : 500;
+$regular : 400;
 $medium : 600;
 $bold : 700;
 
@@ -63,9 +71,11 @@ $bold : 700;
 }
 .h1{
   font-size: 35rem;
+  font-weight: $regular;
 }
 .h2{
   font-size: 21rem;
+  font-weight: $regular;
 }
 .h2_b{
   font-size: 21rem;
@@ -73,6 +83,7 @@ $bold : 700;
 }
 .h3{
   font-size: 18rem;
+  font-weight: $regular;
 }
 .h3_b{
   font-size: 18rem;
@@ -97,7 +108,16 @@ $bold : 700;
 .fc03{
   color: #909090;
 }
+.fcfff{
+  color: #fff;
+}
+.fcft{
+  color: rgba($color: #f6f6f6, $alpha: 0.6);
+}
 
+.text_c{
+  text-align: center;
+}
 .w-1200{
   margin: 0 auto;
   width: 1200rem;
@@ -121,17 +141,22 @@ $bold : 700;
 
 
 #header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
   width: 100%;
   height: 100rem;
   background-color: #fff;
+  box-shadow: 0 3rem 3rem rgba($color: #000, $alpha: 0.15);
 }
 
 .mainvisual{
-  height: calc(100vh - 100rem);
+  height: 100vh;
   // background-color: burlywood;
   .swiper-slide{
     width: 100%;
-    height: calc(100vh - 100rem);
+    height: 100vh;
     background-color: #c4c4c4;
     img{
       width: 100%;
@@ -320,23 +345,59 @@ $bold : 700;
   }
 }
 
-
-
-
-
-
-
-
-
 .doc{
   padding: 190rem 0;
   // background-color: #f5fcfc;
   .w-1200{
-    padding: 100rem 60rem 60rem;
     background-color: #f5fcfc;
     height: 600rem;
     .txt{
-
+      position: relative;
+      padding: 100rem 60rem 60rem;
+      width: 50%;
+      .h2{
+        padding-bottom: 35rem;
+      }
+      .h1_b{
+        padding-bottom: 60rem;
+      }
+      .more_btn{
+        position: absolute;
+        bottom: 60rem;
+        right: 10rem;
+        display: flex;
+        align-items: center;
+        column-gap: 10rem;
+        .img_wrap{
+          position: relative;
+          width: 27rem;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+          &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -10rem;
+            transform: translateY(-50%);
+            display: block;
+            width: 25rem;
+            height: 25rem;
+            background-color: rgba($color: #d3d3d3, $alpha: 0.5);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .doc_img{
+      width: 50%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -344,14 +405,120 @@ $bold : 700;
 .info{
   padding: 120rem 0 150rem;
   // height: 800rem;
-  background-color: #036b6b;
+  background: #036b6b url(/img/main/info_bg.png) no-repeat right 150rem;
+  .info_tit{
+    max-width: 100%;
+  } 
   .w-1200{
-    background-color:#fff;
+    margin-top: 50rem;
     height: 400rem;
+    justify-content: space-between;
+    .time_info{
+      display: flex;
+      flex-direction: column;
+      row-gap: 15rem;
+      width: 49%;
+      .time{
+        padding: 30rem 60rem;
+        background-color: #fff;
+        ul{
+          margin-top: 15rem;
+          li{
+            padding: 5rem 0;
+            display: flex;
+            column-gap: 50rem;
+            .fc01{
+              display: flex;
+              width: 70rem;
+              justify-content: space-between;
+            }
+          }
+        }
+        .ann{
+          margin-top: 15rem;
+        }
+      }
+      .call{
+        padding: 25rem 60rem;
+        background-color: #fff;
+      }
+    }
+    .loca_info{
+      position: relative;
+      width: 49%;
+      background-color: #fff;
+      .location{
+        padding: 17rem 50rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60rem;
+        background-color: #00b6bc;
+      }
+    }
   }
 }
 
 #footer{
   height: 300rem;
   background-color: #4a4e51;
+  .w-1400{
+    padding: 60rem 0;
+    display: flex;
+    justify-content: space-between;
+    .logo_wrap{
+      width: 20%;
+      height: 150rem;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .address_con{
+      display: flex;
+      width: 75%;
+      .box01{
+        width: 60%;
+        .address{
+          padding: 30rem 0;
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 30rem;
+        }
+        .fcft{
+          position: relative;
+          display: inline-block;
+          margin: 3rem 0;
+          &::after{
+            content: " | ";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -17rem;
+            color: rgba($color: #f6f6f6, $alpha: 0.6);
+          }
+          &:nth-child(2), &:nth-child(4){
+            &::after{
+              display: none;
+            }
+          }
+        }
+      }
+      .box02{
+        ul{
+          display: flex;
+          li{
+
+            a{
+              display: inline-block;
+              padding: 0 10rem;
+            }
+            
+          }
+        }
+      }
+    }
+  }
 }
